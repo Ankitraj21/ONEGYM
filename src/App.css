@@ -12,6 +12,26 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* Adjust background properties for different screen sizes */
+@media (max-width: 1200px) {
+  .App {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    background-size: 100% 100%;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
