@@ -26,10 +26,11 @@ jobs:
       - name: Build Docker image
         run: |
           echo "Building Docker image..."
-          docker build -t cygnetops/react-test -t onegymsolution.azurecr.io/myapp:${{ github.sha }} -f Dockerfile.dev .
+          docker build -t onegym/forntend:latest -t onegymsolution.azurecr.io/myapp:latest -t onegymsolution.azurecr.io/myapp:${{ github.sha }} -f Dockerfile.dev .
       - name: Push Docker image to ACR
         run: |
           echo "Pushing Docker image to ACR..."
+          docker push onegymsolution.azurecr.io/myapp:latest
           docker push onegymsolution.azurecr.io/myapp:${{ github.sha }}
 
       - name: Run tests
