@@ -39,8 +39,13 @@ const App = () => {
     };
 
     return (
-        <div className="App">
-            <div className="background"></div>
+        <div className="App"
+            style={{
+                backgroundImage: `url(${background})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '100vh'
+            }}>
             {!userExists && userExists !== null ? (
                 <div>
                     <h2>Create Account</h2>
